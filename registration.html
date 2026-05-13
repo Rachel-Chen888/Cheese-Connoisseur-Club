@@ -22,6 +22,19 @@
             <p>Page content goes here.</p>
         </section>
     </main>
+    <!---Putting Form Skeleton here for now-->
+    <!---TODO: NEED 6 fields/controls!!!-->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="6000"> <!---It's forcing me to put a max length with the min length-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <!--How to validate email?-->
+            <button type="submit">Register</button>
+        </fieldset>
+    </form>
 
     <footer>
         <p>&copy; 2026 CSI 3140 Lab 1</p>
