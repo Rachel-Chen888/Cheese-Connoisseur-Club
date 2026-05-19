@@ -1,6 +1,20 @@
 /* TODO:fix this  */
-table, th, td {
-  border: 1px solid black;
+.main_table {
+  /* prevents double-thick borders between cells */
+  border-collapse: collapse; 
+  width: 100%;
+}
+
+/*lines around header cells and data cells*/
+.main_table th, td {
+  border: 1px solid #4a2e2e; 
+  padding: 10px;          
+  text-align: left;         
+}
+
+/*header row background*/
+.main_table th {
+  background-color: #faecc0;
 }
 
 /*Configure Margins*/
@@ -36,4 +50,19 @@ input:required:invalid {
 
 input:required:valid {
   display: block;
+}
+
+/*schedule page, table format*/
+.schedule_table {
+  border-collapse: collapse; 
+  width: 100%; 
+}
+.schedule_table th, td {
+  border: 1px solid #4a2e2e; 
+  padding: 10px;          
+  text-align: left;         
+}
+/*header row background*/
+.schedule_table th {
+  background-color: #faecc0;
 }
