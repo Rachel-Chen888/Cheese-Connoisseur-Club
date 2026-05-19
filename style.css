@@ -2,3 +2,38 @@
 table, th, td {
   border: 1px solid black;
 }
+
+/*Configure Margins*/
+fieldset {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+
+/*For the Registration page fields*/
+.form-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input { 
+  padding: 8px;
+  width: 100%; /*This is just the recommendations from VSCode, what the heck*/
+}
+
+
+/*For registration.html, make fields red if they aren't filled out*/
+/*TODO: FIX THIS*/
+input:required:invalid {
+  border: 2px solid red;
+}
+
+input:required:valid {
+  display: block;
+}

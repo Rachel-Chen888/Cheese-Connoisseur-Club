@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -22,28 +24,55 @@
             <p>Join us and become a member of the most exclusive cheese appreciation society!</p>
             <small>Fill out all of the required fields.</small>
             <small>We swear this isn't a threat.</small>
+            <br></br>
              <!---Putting Form Skeleton here for now-->
             <!---TODO: NEED 6 fields/controls!!!-->
             <form action="#" method="post">
                 <fieldset>
                     <legend>Registration Form</legend>
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="6000">
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="6000">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="SSN">SSN:</label>
-                    <input type="number" id="SSN" name="SSN" required min="100000000" max="999999999"> <!---Need to configure this to actually match SSN number-->
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" minlength="8" required> <!---Need to add validation-->
-                    <label for="age">Age:</label>
-                    <input type="range" min="1" max="100" value="100" class="slider" id="age" name="age" oninput="document.getElementById('ageValue').textContent = this.value;" required>
-                    <output id="ageValue">100</output>
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">I pledge allegiance to the flag of the Cheese, and to the republic for which it stands, one nation under Cheese, indivisible Cheese, with liberty Cheese and justice Cheese for all Cheese.</label>
+
+                    <div class="form-input">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="6000">
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="6000">
+                    </div>
+
+                    <div class="form-input">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-input">
+                        <!---Need to add text to specify SSN format-->
+                        <label for="SSN">SSN:</label>
+                        <input type="text" id="SSN" name="SSN" pattern="[0-9]{9}" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" minlength="8" required> <!---Need to add validation-->
+                    </div>
+
+                    <div class="form-input">
+                        <label for="age">Age:</label>
+                        <input type="range" min="1" max="100" value="100" class="slider" id="age" name="age" oninput="document.getElementById('ageValue').textContent = this.value;" required>
+                        <output id="ageValue">100</output>
+                    </div>
+
+                    <div class="form-input">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I pledge allegiance to the Cheese Connoisseur Club, and to the republic for which it stands, one nation under Cheese, indivisible, with liberty and justice for all Cheese lovers, appreciators and connoisseurs.</label>
+                    </div>
+
                     <button type="submit">Register</button>
                 </fieldset>
             </form>
