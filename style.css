@@ -8,7 +8,7 @@
 }
 
 /*lines around header cells and data cells*/
-.main_table th, td {
+.main_table th, .main_table td {
   border: 1px solid #4a2e2e; 
   padding: 10px;          
   text-align: left;         
@@ -95,16 +95,50 @@ input:required:valid {
 
 /*SCHEDULE PAGE -----------------------------------------------------------------------------*/
 /*schedule page, table format*/
+body.schedule_body{
+  background-image: url(../Cheese-Connoisseur-Club/Images/swiss_cheese.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.schedule_body .page_wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px 20px;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: rgba(255, 202, 241, 0.5); /*50% opacity*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.schedule_body{
+  text-align: center;
+  margin-bottom: 20px;
+}
 .schedule_table {
   border-collapse: collapse; 
-  width: 100%; 
+  width: max-content; 
+  margin: 20px auto;
 }
-.schedule_table th, td {
+.schedule_table caption {
+  font-weight: bold;
+  padding: 12px;
+  background-color: #4a2e2e;
+  color: #faecc0; 
+  
+  border: 1px solid #4a2e2e;
+  border-bottom: none;
+  text-align: center;
+}
+.schedule_table th, .schedule_table td {
   border: 1px solid #4a2e2e; 
   padding: 10px;          
   text-align: left;         
 }
-/*header row background*/
 .schedule_table th {
   background-color: #faecc0;
 }
