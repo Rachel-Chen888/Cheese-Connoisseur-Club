@@ -4,7 +4,7 @@
 .main_table {
   /* prevents double-thick borders between cells */
   border-collapse: collapse; 
-  width: 100%;
+  width: 80%;
 }
 
 /*lines around header cells and data cells*/
@@ -19,6 +19,10 @@
   background-color: #faecc0;
 }
 
+nav a { 
+  font-weight: bold;
+  margin-right: 15px; 
+}
 
 
 /*Configure Margins*/
