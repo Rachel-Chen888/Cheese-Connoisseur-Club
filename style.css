@@ -39,6 +39,25 @@ input {
 
 
 /*REGISTRATION PAGE ------------------------------------------------------------------*/
+
+.register-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*For the Registration page fields*/
 .form-input {
   padding: 10px;
@@ -67,7 +86,6 @@ input {
 
 /*checkboxes*/
 .checkbox-group {
-  /*How do I make the checkbox bigger?*/
   display: flex;
   gap: 10px;
   align-items: center;
@@ -115,10 +133,6 @@ input:required:valid {
   margin-bottom: 20px;
 }
 
-.main-nav{
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .about-section {
   margin-bottom: 30px;
