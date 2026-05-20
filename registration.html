@@ -54,7 +54,7 @@
 
                     <div class="form-input">
                         <label for="phone">Phone Number:<span class ="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
                     </div>
 
                     <div class="form-input">
@@ -82,20 +82,20 @@
                     <div class="form-input radio-group">
                         <label for="cheese knowledge">Cheese Knowledge:<span class ="required">*</span></label><br>
 
-                        <label for="beginner">Beginner</label>
-                        <input type="radio" id="beginner" name="cheese_knowledge" value="beginner" required>
+                        <label for="beginner">Beginner <input type="radio" id="beginner" name="cheese_knowledge" value="beginner" required>
+                       </label>
                        
-                        <label for="intermediate">Intermediate</label>
-                        <input type="radio" id="intermediate" name="cheese_knowledge" value="intermediate">
+                        <label for="intermediate">Intermediate <input type="radio" id="intermediate" name="cheese_knowledge" value="intermediate"></label>
                         
-                        <label for="expert">Expert</label>
-                        <input type="radio" id="expert" name="cheese_knowledge" value="expert">
                         
-                        <label for="connoisseur">Connoisseur</label>
-                        <input type="radio" id="connoisseur" name="cheese_knowledge" value="connoisseur">
+                        <label for="expert">Expert <input type="radio" id="expert" name="cheese_knowledge" value="expert"></label>
                         
-                        <label for="god">God</label>
-                        <input type="radio" id="god" name="cheese_knowledge" value="god">
+                        
+                        <label for="connoisseur">Connoisseur <input type="radio" id="connoisseur" name="cheese_knowledge" value="connoisseur">
+                        </label>
+                        
+                        <label for="god">God  <input type="radio" id="god" name="cheese_knowledge" value="god"></label>
+                       
                         
                     </div>
 
