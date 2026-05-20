@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
+    <!--must add this to have css working-->
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body>
+<body class="schedule_body">
+    <div class="page_wrapper">
     <header>
         <h1>Cheese Connoisseur Club</h1>
         <nav aria-label="Main navigation">
@@ -19,25 +23,31 @@
     <main>
         <section>
             <h2>Upcoming Events</h2>
-            <p>This week's events:</p>
             <!---HOW TO FORMAT TABLE?-->
             <!---Need to add column/row headers-->
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Time</th>
-                    <th>Event</th>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>10:00 AM</td>
-                    <td>Cheese Tasting</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>2:00 PM</td>
-                    <td>Workshop: Cheese Pairing</td>
-                </tr>
+            <table class="schedule_table">
+                <caption>This week's events</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Event</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>10:00 AM</td>
+                        <td>Cheese Tasting</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>2:00 PM</td>
+                        <td>Workshop: Cheese Pairing</td>
+                    </tr>
+                </tbody>
+                
             </table>
         </section>
     </main>
@@ -45,5 +55,6 @@
     <footer>
         <p>&copy; 2026 CSI 3140 Lab 1</p>
     </footer>
+    </div>
 </body>
 </html>

@@ -1,20 +1,30 @@
 /* TODO:fix this  */
-table, th, td {
-  border: 1px solid black;
+/*INDEX PAGE -----------------------------------------------------------------------------*/
+
+.main_table {
+  /* prevents double-thick borders between cells */
+  border-collapse: collapse; 
+  width: 100%;
 }
+
+/*lines around header cells and data cells*/
+.main_table th, .main_table td {
+  border: 1px solid #4a2e2e; 
+  padding: 10px;          
+  text-align: left;         
+}
+
+/*header row background*/
+.main_table th {
+  background-color: #faecc0;
+}
+
+
 
 /*Configure Margins*/
 fieldset {
   margin-bottom: 20px;
   padding: 20px;
-}
-
-
-/*For the Registration page fields*/
-.form-input {
-  padding: 10px;
-  margin-bottom: 15px;
-  margin-right: 20px;
 }
 
 label {
@@ -28,7 +38,86 @@ input {
 }
 
 
-/*For registration.html, make fields red if they aren't filled out*/
+/*REGISTRATION PAGE ------------------------------------------------------------------*/
+
+.register-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*For the Registration page fields*/
+.form-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+/*Age slider*/
+.slider-group{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*.slider-group input[type="range"] {
+  flex: 1;
+}*/
+
+/*radio buttons*/
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 15px;
+}
+
+/*TODO: FIX CHECKBOXES*/
+/*checkboxes*/
+.checkbox-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+}
+
+/*Center the button!!!*/
+/*button*/
+.submit{
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+button{
+  padding: 10px 20px;
+  background-color: #4a2e2e;
+  color: #faecc0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
 /*TODO: FIX THIS*/
 input:required:invalid {
   border: 2px solid red;
@@ -36,4 +125,98 @@ input:required:invalid {
 
 input:required:valid {
   display: block;
+}
+
+/*Required * */ 
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+/*SCHEDULE PAGE -----------------------------------------------------------------------------*/
+/*schedule page, table format*/
+body.schedule_body{
+  background-image: url(../Cheese-Connoisseur-Club/Images/swiss_cheese.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.schedule_body .page_wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px 20px;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: rgba(255, 202, 241, 0.5); /*50% opacity*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.schedule_body{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.schedule_table {
+  border-collapse: collapse; 
+  width: max-content; 
+  margin: 20px auto;
+}
+.schedule_table caption {
+  font-weight: bold;
+  padding: 12px;
+  background-color: #4a2e2e;
+  color: #faecc0; 
+  
+  border: 1px solid #4a2e2e;
+  border-bottom: none;
+  text-align: center;
+}
+.schedule_table th, .schedule_table td {
+  border: 1px solid #4a2e2e; 
+  padding: 10px;          
+  text-align: left;         
+}
+.schedule_table th {
+  background-color: #faecc0;
+}
+
+/*ABOUT PAGE -----------------------------------------------------------------------------*/
+.site-header{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.about-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  padding-top: 0px;
+  border: 1px solid #41213a;
+  background-color: #faecc0;
+}
+
+.activity-list {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
+.external-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*General Elements -----------------------------------------------------------------------------*/
+/*body background and font*/
+body{
+  padding: 10px;
+}
+
+/*footer*/
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #faecc0;
 }
