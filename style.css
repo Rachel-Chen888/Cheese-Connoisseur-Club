@@ -95,10 +95,14 @@ input {
 /*radio buttons*/
 .radio-group {
   display: flex;
-  flex-direction: column;
   gap: 5px;
   margin-right: 15px;
   accent-color: #4a2e2e;
+  flex-direction: column;
+}
+
+.radio-options label {
+  font-size: 14px; 
 }
 
 /*TODO: FIX CHECKBOXES*/
@@ -113,6 +117,16 @@ input {
 .checkbox-group label {
   display: flex;
   align-items: flex-start;
+}
+
+.textarea {
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: 15px;
+  margin-right: 60px;
+  margin-left: 40px;
+  border: none;
+  border-radius: 4px;
 }
 
 /*Center the button!!!*/

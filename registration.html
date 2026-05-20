@@ -29,7 +29,9 @@
             <br></br>
              <!---Putting Form Skeleton here for now-->
             <!---TODO: NEED 6 fields/controls!!!-->
-            <form action="#" method="post" class="register-form">
+
+            <!--Redirect to index on success-->
+            <form action="index.html" method="post" class="register-form">
                 <fieldset>
                     <legend>Registration Form</legend>
 
@@ -82,23 +84,38 @@
                     </div>
 
                     <div class="form-input radio-group">
-                        <label for="cheese knowledge">Cheese Knowledge Level:<span class ="required">*</span></label><br>
 
-                        <label for="beginner">Beginner <input type="radio" id="beginner" name="cheese_knowledge" value="beginner" required>
-                       </label>
-                       
-                        <label for="intermediate">Intermediate <input type="radio" id="intermediate" name="cheese_knowledge" value="intermediate"></label>
-                        
-                        
-                        <label for="expert">Expert <input type="radio" id="expert" name="cheese_knowledge" value="expert"></label>
-                        
-                        
-                        <label for="connoisseur">Connoisseur <input type="radio" id="connoisseur" name="cheese_knowledge" value="connoisseur">
+                        <label class="group-label">
+                            Cheese Knowledge:
                         </label>
-                        
-                        <label for="god">God  <input type="radio" id="god" name="cheese_knowledge" value="god"></label>
-                       
-                        
+
+                        <div class="radio-options">
+                            <label for="beginner">Beginner <input type="radio" id="beginner"
+                                name="cheese_knowledge"
+                                value="beginner" required></label>
+                            
+                                                       
+                            <label for="intermediate">Intermediate <input type="radio" id="intermediate"
+                                name="cheese_knowledge"
+                                value="intermediate"></label>
+                            
+
+                            
+                            <label for="expert">Expert <input type="radio" id="expert"
+                                name="cheese_knowledge"
+                                value="expert"></label>
+
+                            <label for="god">God <input type="radio" id="god"
+                                name="cheese_knowledge"
+                                value="god">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-input textarea">
+                        <label for="favorite_cheese">Favorite Cheese:<span class ="required">*</span></label>
+                        <textarea id="favorite_cheese" name="favorite_cheese" rows="4" cols="50" required></textarea>
                     </div>
 
                     <div class="form-input checkbox-group">
