@@ -18,6 +18,7 @@
         </nav>
     </header>
 
+    <!---Add radio buttons, dropdown menus, and multiple choice (checkboxes)-->
     <main>
         <section>
             <h2>Register for the Cheese Connoisseur Club</h2>
@@ -32,56 +33,88 @@
                     <legend>Registration Form</legend>
 
                     <div class="form-input">
-                        <label for="firstname">First Name:</label>
+                        <label for="firstname">First Name:<span class ="required">*</span></label>
                         <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="6000">
                     </div>
                     
                     <div class="form-input">
-                        <label for="lastname">Last Name:</label>
+                        <label for="lastname">Last Name:<span class ="required">*</span></label>
                         <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="6000">
                     </div>
 
                     <div class="form-input">
-                        <label for="email">Email:</label>
+                        <label for="email">Email:<span class ="required">*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-input">
                         <!---Need to add text to specify SSN format-->
-                        <label for="SSN">SSN:</label>
+                        <label for="SSN">SSN:<span class ="required">*</span></label>
                         <input type="text" id="SSN" name="SSN" pattern="[0-9]{9}" required>
                     </div>
 
                     <div class="form-input">
-                        <label for="phone">Phone Number:</label>
+                        <label for="phone">Phone Number:<span class ="required">*</span></label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
 
                     <div class="form-input">
-                        <label for="password">Password:</label>
+                        <label for="password">Password:<span class ="required">*</span></label>
                         <input type="password" id="password" name="password" minlength="8" required> <!---Need to add validation-->
                     </div>
 
-                    <div class="form-input">
-                        <label for="age">Age:</label>
+                   <div class="form-input slider-group">
+                        <label for="age">Age:<span class ="required">*</span></label>
                         <input type="range" min="1" max="100" value="100" class="slider" id="age" name="age" oninput="document.getElementById('ageValue').textContent = this.value;" required>
                         <output id="ageValue">100</output>
                     </div>
 
                     <div class="form-input">
+                        <label for="gender">Gender:<span class ="required">*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select an option</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="cheese">Cheese</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input radio-group">
+                        <label for="cheese knowledge">Cheese Knowledge:<span class ="required">*</span></label><br>
+
+                        <label for="beginner">Beginner</label>
+                        <input type="radio" id="beginner" name="cheese_knowledge" value="beginner" required>
+                       
+                        <label for="intermediate">Intermediate</label>
+                        <input type="radio" id="intermediate" name="cheese_knowledge" value="intermediate">
+                        
+                        <label for="expert">Expert</label>
+                        <input type="radio" id="expert" name="cheese_knowledge" value="expert">
+                        
+                        <label for="connoisseur">Connoisseur</label>
+                        <input type="radio" id="connoisseur" name="cheese_knowledge" value="connoisseur">
+                        
+                        <label for="god">God</label>
+                        <input type="radio" id="god" name="cheese_knowledge" value="god">
+                        
+                    </div>
+
+                    <div class="form-input checkbox-group">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I pledge allegiance to the Cheese Connoisseur Club, and to the republic for which it stands, one nation under Cheese, indivisible, with liberty and justice for all Cheese lovers, appreciators and connoisseurs.</label>
+                        <label for="terms"><span class ="required">*</span> I pledge allegiance to the Cheese Connoisseur Club, and to the republic for which it stands, one nation under Cheese, indivisible, with liberty and justice for all Cheese lovers, appreciators and connoisseurs.</label>
                     </div>
 
                     <button type="submit">Register</button>
+                    <!---Need the button to redirect the user upon successful registration-->
                 </fieldset>
             </form>
         </section>
     </main>
    
 
-    <footer>
-         <img src="Images/cheese_icon_png.png" alt="Cheese Icon" width="70">
+    <footer class="site-footer">
+        <img src="Images/cheese_icon_png.png" alt="Cheese Icon" width="70">
         <p>&copy; 2026 CSI 3140 Lab 1</p>
     </footer>
 </body>

@@ -1,4 +1,6 @@
 /* TODO:fix this  */
+/*INDEX PAGE -----------------------------------------------------------------------------*/
+
 .main_table {
   /* prevents double-thick borders between cells */
   border-collapse: collapse; 
@@ -17,18 +19,12 @@
   background-color: #faecc0;
 }
 
+
+
 /*Configure Margins*/
 fieldset {
   margin-bottom: 20px;
   padding: 20px;
-}
-
-
-/*For the Registration page fields*/
-.form-input {
-  padding: 10px;
-  margin-bottom: 15px;
-  margin-right: 20px;
 }
 
 label {
@@ -42,7 +38,46 @@ input {
 }
 
 
-/*For registration.html, make fields red if they aren't filled out*/
+/*REGISTRATION PAGE ------------------------------------------------------------------*/
+/*For the Registration page fields*/
+.form-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+/*Age slider*/
+.slider-group{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*.slider-group input[type="range"] {
+  flex: 1;
+}*/
+
+/*radio buttons*/
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 15px;
+}
+
+/*checkboxes*/
+.checkbox-group {
+  /*How do I make the checkbox bigger?*/
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox-group label {
+  display: inline-block;
+}
+
+
 /*TODO: FIX THIS*/
 input:required:invalid {
   border: 2px solid red;
@@ -52,6 +87,13 @@ input:required:valid {
   display: block;
 }
 
+/*Required * */ 
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+/*SCHEDULE PAGE -----------------------------------------------------------------------------*/
 /*schedule page, table format*/
 .schedule_table {
   border-collapse: collapse; 
@@ -64,5 +106,47 @@ input:required:valid {
 }
 /*header row background*/
 .schedule_table th {
+  background-color: #faecc0;
+}
+
+/*ABOUT PAGE -----------------------------------------------------------------------------*/
+.site-header{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-nav{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  padding-top: 0px;
+  border: 1px solid #41213a;
+  background-color: #faecc0;
+}
+
+.activity-list {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
+.external-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*General Elements -----------------------------------------------------------------------------*/
+/*body background and font*/
+body{
+  padding: 10px;
+}
+
+/*footer*/
+.site-footer {
+  text-align: center;
+  padding: 15px;
   background-color: #faecc0;
 }
