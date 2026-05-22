@@ -9,12 +9,18 @@ nav a {
   color: black;
   text-align: center;
   text-decoration: none;
+  font-weight: bold; 
 }
 
 .main_table {
   /* prevents double-thick borders between cells */
   border-collapse: collapse; 
   /* width: 80%; */
+
+  /* Center the table */
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 /*lines around header cells and data cells*/
@@ -28,10 +34,9 @@ nav a {
 .main_table th {
   background-color: #faecc0;
 }
-
-nav a { 
-  font-weight: bold;
-  margin-right: 15px; 
+ 
+.cheese-ranks {
+  text-align: center; 
 }
 
 
