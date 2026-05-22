@@ -1,10 +1,20 @@
 /* TODO:fix this  */
 /*INDEX PAGE -----------------------------------------------------------------------------*/
 
+nav a {
+  display: inline-block;
+  width: 90px;
+  padding: 8px;
+  background: #faecc0;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
 .main_table {
   /* prevents double-thick borders between cells */
   border-collapse: collapse; 
-  width: 80%;
+  /* width: 80%; */
 }
 
 /*lines around header cells and data cells*/
@@ -268,3 +278,4 @@ body{
   margin-top: 30px;
   margin: 40px 20px;
 }
+
