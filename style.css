@@ -186,7 +186,7 @@ input:required:valid {
 /*SCHEDULE PAGE -----------------------------------------------------------------------------*/
 /*schedule page, table format*/
 body.schedule_body{
-  background-image: url(../Cheese-Connoisseur-Club/Images/swiss_cheese.jpg);
+  background-image: url(../Images/swiss_cheese.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -282,4 +282,20 @@ footer {
   margin-top: 30px;
   margin: 40px 20px;
 }
-
+/*this one is specifically for schedule page*/
+footer.schedule_footer {
+  position: fixed;   
+  bottom: 0;         
+  left: 410px;           
+  right: 410px;          
+  z-index: 1000;     
+  background-color: rgba(250, 236, 192, 0.95); 
+  margin: 40px 20px;
+  padding: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 4px;
+}
