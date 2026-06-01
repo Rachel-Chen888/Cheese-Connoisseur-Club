@@ -1,6 +1,6 @@
-/* TODO:fix this  */
-/*INDEX PAGE -----------------------------------------------------------------------------*/
+/* GLOBAL STYLES -----------------------------------------------------------------------------*/
 
+/*Navigation Bar: it is a global component*/
 nav a {
   display: inline-block;
   width: 90px;
@@ -11,6 +11,43 @@ nav a {
   text-decoration: none;
   font-weight: bold; 
 }
+
+/*body background and font*/
+body{
+  background-color:rgb(255, 252, 238);
+  padding: 10px;
+  color:#41213a;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(250, 236, 192, 0.7);
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin: 40px 20px;
+}
+/*this one is specifically for schedule page*/
+footer.schedule_footer {
+  position: fixed;   
+  bottom: 0;         
+  left: 410px;           
+  right: 410px;          
+  z-index: 1000;     
+  background-color: rgba(250, 236, 192, 0.95); 
+  margin: 40px 20px;
+  padding: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 4px;
+}
+
+/*INDEX PAGE -----------------------------------------------------------------------------*/
 
 .main_table {
   /* prevents double-thick borders between cells */
@@ -262,40 +299,4 @@ body.schedule_body{
 .external-link {
   text-decoration: none;
   font-weight: bold;
-}
-
-/*General Elements -----------------------------------------------------------------------------*/
-/*body background and font*/
-body{
-  background-color:rgb(255, 252, 238);
-  padding: 10px;
-  color:#41213a;
-}
-
-/*footer*/
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: rgba(250, 236, 192, 0.7);
-  border: none;
-  border-radius: 4px;
-  margin-top: 30px;
-  margin: 40px 20px;
-}
-/*this one is specifically for schedule page*/
-footer.schedule_footer {
-  position: fixed;   
-  bottom: 0;         
-  left: 410px;           
-  right: 410px;          
-  z-index: 1000;     
-  background-color: rgba(250, 236, 192, 0.95); 
-  margin: 40px 20px;
-  padding: 15px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  border-radius: 4px;
 }
