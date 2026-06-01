@@ -2,7 +2,7 @@
 
 /*Navigation Bar: it is a global component*/
 nav a {
-  display: inline-block;
+  display: inline-block; 
   width: 90px;
   padding: 8px;
   background: #faecc0;
@@ -17,6 +17,7 @@ body{
   background-color:rgb(255, 252, 238);
   padding: 10px;
   color:#41213a;
+  cursor: url('./Images/cursor.png'), auto;   
 }
 
 /*footer*/
@@ -29,6 +30,7 @@ footer {
   margin-top: 30px;
   margin: 40px 20px;
 }
+
 /*this one is specifically for schedule page*/
 footer.schedule_footer {
   position: fixed;   
@@ -177,7 +179,6 @@ input {
  box-sizing: border-box
 }
 
-/*Center the button!!!*/
 /*button*/
 .submit{
   text-align: center;
