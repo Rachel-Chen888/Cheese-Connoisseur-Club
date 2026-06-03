@@ -1,5 +1,42 @@
 /* GLOBAL STYLES -----------------------------------------------------------------------------*/
 
+/*Container*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*Card*/
+.card {
+  background-color: #faecc0;
+  border: 1px solid #4a2e2e;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*Header*/
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #4a2e2e;
+  color: #faecc0;
+  border-radius: 5px;
+}
+
+/*Button*/
+.button {
+  padding: 10px 20px;
+  background-color: #4a2e2e;
+  color: #faecc0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
 /*Navigation Bar: it is a global component*/
 nav a {
   display: inline-block; 
@@ -18,6 +55,7 @@ body{
   padding: 10px;
   color:#41213a;
   cursor: url('./Images/cursor.png'), auto;   
+  box-sizing: border-box; //TA said this would be helpful (TODO: Figure out how to use this)
 }
 
 /*footer*/
