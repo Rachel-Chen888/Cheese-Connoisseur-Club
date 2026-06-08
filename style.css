@@ -4,6 +4,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 /*Container*/
@@ -12,6 +13,7 @@
     margin: 0 auto;
     color:#41213a; 
     padding: 20px;
+    max-width: 900px;
 }
 
 /*Card*/
@@ -166,9 +168,9 @@ input {
 
 .register-form{
   margin: auto;
-    background-color: #faecc0;
-    border-radius: 5px;
-    padding: 20px;
+  background-color: #faecc0;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .register-form fieldset {
