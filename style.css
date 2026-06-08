@@ -1,3 +1,7 @@
+/* Typography */  
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Manrope:wght@200..800&display=swap');
+
 /* GLOBAL STYLES -----------------------------------------------------------------------------*/
 
 *,
@@ -27,6 +31,7 @@
 
 /*Header*/
 header {
+  font-family: "Fuzzy Bubbles", sans-serif;
   text-align: center;
   padding: 20px;
   background-color: #4a2e2e;
@@ -36,10 +41,24 @@ header {
 
 /*Todo with nav bar?*/
 .site-header{
+  font-family: "Fuzzy Bubbles", sans-serif;
   text-align: center;
   margin-bottom: 20px;
   padding: 30px;
 }
+
+h2 {
+  
+  font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+}
+
+ul {
+  font-family: "Manrope", sans-serif;
+} 
 
 /*Button*/
 button{
@@ -122,6 +141,7 @@ footer.schedule_footer {
   /* Center the table */
   margin-left: auto;
   margin-right: auto;
+  font-family: "Manrope", sans-serif;
 
 }
 
