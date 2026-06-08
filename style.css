@@ -132,6 +132,21 @@ footer.schedule_footer {
   border-radius: 4px;
 }
 
+/*Part G*/
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+outline: 3px solid #4a2e2e;
+outline-offset: 2px;
+}
+
+/*For Nav Bar*/
+a:focus {
+outline: 3px solid #faecb0;
+outline-offset: 2px;
+}
+
 /*INDEX PAGE -----------------------------------------------------------------------------*/
 
 .main_table {
