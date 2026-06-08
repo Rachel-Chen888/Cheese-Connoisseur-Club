@@ -362,6 +362,8 @@ body.schedule_body{
 }
 
 .about-section {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
   margin: 40px 20px;
   padding: 20px;
@@ -369,6 +371,7 @@ body.schedule_body{
   border: 1px solid #41213a;
   border-radius: 5px;
   background-color: #faecc0;
+  
 }
 
 .activity-list {
