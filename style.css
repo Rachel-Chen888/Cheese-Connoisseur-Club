@@ -99,7 +99,7 @@ body{
   padding: 10px;
   color:#41213a;
   cursor: url('./Images/cursor.png'), auto;   
-  box-sizing: border-box; //TA said this would be helpful (TODO: Figure out how to use this)
+  box-sizing: border-box; /*TA said this would be helpful (TODO: Figure out how to use this)*/
 }
 
 /*footer*/
@@ -324,7 +324,7 @@ input:required:valid {
 /*SCHEDULE PAGE -----------------------------------------------------------------------------*/
 /*schedule page, table format*/
 body.schedule_body{
-  background-image: url(../Images/swiss_cheese.jpg);
+  background-image: url(../Images/cheese_bg.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
