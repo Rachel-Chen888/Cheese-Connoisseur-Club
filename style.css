@@ -270,7 +270,8 @@ input {
   margin: 20px;
 }
 
-.radio-options label {
+/*GRID IS HERE!!!*/
+.radio-grid label {
   font-size: 14px; 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
