@@ -199,6 +199,7 @@ input {
 .register-page{
   margin: auto;
   color:#41213a; 
+  box-sizing: border-box;
 }
 
 .register-form{
