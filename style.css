@@ -194,7 +194,6 @@ input {
   width: 100%; /*This is just the recommendations from VSCode, what the heck*/
 }
 
-
 /*REGISTRATION PAGE ------------------------------------------------------------------*/
 
 .register-page{
@@ -387,6 +386,13 @@ body.schedule_body{
   border-radius: 5px;
   background-color: #faecc0;
   
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  text-align: center;
 }
 
 .activity-list {
