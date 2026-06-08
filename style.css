@@ -8,7 +8,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 /*Container*/
@@ -53,6 +52,19 @@ h2 {
   font-family: "Fuzzy Bubbles", sans-serif;
 }
 
+/*Attempt to use @media*/
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+}
+
 p {
   font-family: "Manrope", sans-serif;
 }
@@ -91,6 +103,12 @@ nav a {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    flex-direction: column;
+  }
 }
 
 /*body background and font*/
@@ -291,7 +309,9 @@ input {
 .checkbox-group label {
   display: flex;
   align-items: flex-start;
-}
+   min-width: 0;
+    overflow-wrap: break-word;
+} 
 
 .form-input textarea {
  width: 100%;
@@ -316,11 +336,6 @@ input:required:valid {
   display: block;
 }
 
-/*Required * */ 
-.required {
-  color: red;
-  font-weight: bold;
-}
 
 /*SCHEDULE PAGE -----------------------------------------------------------------------------*/
 /*schedule page, table format*/
@@ -375,6 +390,12 @@ body.schedule_body{
 /*ABOUT PAGE -----------------------------------------------------------------------------*/
 .about{ 
   color:#41213a;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-section a {
+    overflow-wrap: break-word;
 }
 
 .about-section {
