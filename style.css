@@ -50,7 +50,6 @@ header {
 }
 
 h2 {
-  
   font-family: "Fuzzy Bubbles", comicsans, sans-serif;
 }
 
@@ -152,7 +151,13 @@ footer.schedule_footer {
   border-radius: 4px;
 }
 
-/*Part G*/
+.external-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5e2828;
+}
+
+/*Part G: The Accessibility highlights*/
 button:focus,
 input:focus,
 select:focus,
@@ -430,7 +435,7 @@ body.schedule_body{
   padding-left: 25px;
 }
 
-.external-link {
-  text-decoration: none;
-  font-weight: bold;
+.about-section a:focus {
+outline: 2px solid #4a2e2e; 
+offset: 1px;
 }
