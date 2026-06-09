@@ -172,6 +172,17 @@ outline: 3px solid #faecb0;
 outline-offset: 2px;
 }
 
+/*I don't know how I did this, but it's AWESOME!!!*/
+button:hover, 
+input:hover, 
+select:hover,
+textarea:hover,
+a:hover {
+  background-color: #4a2e2e;
+  color: #faecc0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /*INDEX PAGE -----------------------------------------------------------------------------*/
 
 .main_table {
