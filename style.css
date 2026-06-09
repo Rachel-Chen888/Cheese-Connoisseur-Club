@@ -12,12 +12,14 @@
 
 /*Container*/
 .container {
+    display: flex; /*Added Flex, cuz WHY NOT?*/
+    flex-direction: column;
     width: min(90%, 900px);
     margin: 0 auto;
     color:#41213a; 
     padding: 20px;
     max-width: 900px;
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope", comicsans, sans-serif;
 }
 
 /*Card*/
@@ -31,7 +33,7 @@
 
 /*Header*/
 header {
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: "Fuzzy Bubbles", comicsans, sans-serif;
   text-align: center;
   padding: 20px;
   background-color: #4a2e2e;
@@ -41,7 +43,7 @@ header {
 
 /*Todo with nav bar?*/
 .site-header{
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: "Fuzzy Bubbles", comicsans, sans-serif;
   text-align: center;
   margin-bottom: 20px;
   padding: 30px;
@@ -49,7 +51,7 @@ header {
 
 h2 {
   
-  font-family: "Fuzzy Bubbles", sans-serif;
+  font-family: "Fuzzy Bubbles", comicsans, sans-serif;
 }
 
 /*Attempt to use @media*/
