@@ -14,7 +14,6 @@
 .container {
     display: flex; /*Added Flex, cuz WHY NOT?*/
     flex-direction: column;
-    width: min(90%, 900px);
     margin: 0 auto;
     color:#41213a; 
     padding: 20px;
