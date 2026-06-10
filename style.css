@@ -12,8 +12,6 @@
 
 /*Container*/
 .container {
-    display: flex; /*Added Flex, cuz WHY NOT?*/
-    flex-direction: column;
     margin: 0 auto;
     color:#41213a; 
     padding: 20px;
@@ -328,18 +326,19 @@ input {
   padding: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) { /*Tried to use 1024px to accomodate Tablets?*/
   .checkbox-group {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
-.checkbox-group label {
+.checkbox-group label[for="terms"] {
   display: flex;
   align-items: flex-start;
   overflow-wrap: break-word;
   font-size: 0.9em; /*Just trying to check the boxes*/
+  min-width: 200px;
 } 
 
 .form-input textarea {
