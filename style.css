@@ -136,20 +136,20 @@ footer {
 /*TODO: REMOVE ONE OF THESE*/
 /*this one is specifically for schedule page*/
 footer.schedule_footer {
-  position: fixed;   
-  bottom: 0;         
-  left: 410px;           
-  right: 410px;          
-  z-index: 1000;     
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box; 
   background-color: rgba(250, 236, 192, 0.95); 
-  margin: 40px 20px;
   padding: 15px;
-  
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  border-radius: 4px;
 }
 
 .external-link {
@@ -374,12 +374,14 @@ body.schedule_body{
   align-items: flex-start;
   min-height: 100vh;
 }
+
 .schedule_body .page_wrapper {
+  flex: 1;
   width: 100%;
   max-width: 800px;
   margin: 40px 20px;
   border-radius: 8px;
-  padding: 30px;
+  padding: 50px;
   background-color: rgba(255, 202, 241, 0.5); /*50% opacity*/
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
