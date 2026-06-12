@@ -390,9 +390,29 @@ body.schedule_body{
   box-sizing: border-box; 
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+  body.schedule_body {
+    justify-content: flex-start; 
+  }
+  .page-container {
+    width: 100%;
+  }
   .schedule_body .page_wrapper {
-    padding: 50px;
+    width: 100%; 
+    margin: 20px auto; 
+    padding: 15px;
+    box-sizing: border-box; 
+  }
+  .schedule_table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; /* Keeps rows from squishing too tall */
+  }
+  footer.schedule_footer {
+    width: 92%; 
+    margin: 0 auto 20px auto; 
+    padding: 15px; 
   }
 }
 
