@@ -379,11 +379,21 @@ body.schedule_body{
   flex: 1;
   width: 100%;
   max-width: 800px;
-  margin: 40px 20px;
+  margin: 40px 20px; 
   border-radius: 8px;
-  padding: 50px;
-  background-color: rgba(255, 202, 241, 0.5); /*50% opacity*/
+  
+  /* FIX: Lower the default padding for mobile screens */
+  padding: 20px; 
+  
+  background-color: rgba(255, 202, 241, 0.5);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; 
+}
+
+@media (min-width: 600px) {
+  .schedule_body .page_wrapper {
+    padding: 50px;
+  }
 }
 
 .schedule_body{
@@ -392,7 +402,8 @@ body.schedule_body{
 }
 .schedule_table {
   border-collapse: collapse; 
-  width: max-content; 
+  /* FIX: Change from 'max-content' to '100%' so it adapts to the screen */
+  width: 100%; 
   margin: 20px auto;
 }
 .schedule_table caption {
