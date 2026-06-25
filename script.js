@@ -186,7 +186,10 @@ const announcements = [
     "Cheese Wars commencing on July 32"
 ];
 announcements.forEach(function (announcement) {
-    const item = document.createElement("li");
+    const item = document.createElement("li"); 
+    item.addEventListener("click", () => {
+        item.remove(item); 
+    }); 
     item.textContent = announcement;
     document.querySelector("#announcements").appendChild(item);
 });

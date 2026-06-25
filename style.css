@@ -118,7 +118,7 @@ body{
   background-color:rgb(255, 252, 238);
   padding: 10px;
   color:#41213a;
-  cursor: url('./Images/cursor.png'), auto;   
+  /* cursor: url('./Images/cursor.png'), auto;    */
   box-sizing: border-box; /*TA said this would be helpful (TODO: Figure out how to use this)*/
 }
 
@@ -311,7 +311,7 @@ input {
     box-sizing: border-box;
 }
 
-.content-header {
+.content-block {
   text-align: center;
   padding: 15px;
   background-color: #faecc0;
@@ -319,6 +319,18 @@ input {
   border-radius: 4px;
   margin-top: 30px;
   margin: 40px 20px;
+}
+
+#announcements {
+  list-style-type: none; 
+  padding-right: 40px; /* padding left has 40px because its a list item  */
+}
+
+#announcements li {
+  margin-bottom: 10px; 
+  border: 2px solid black; 
+  padding: 8px; 
+  background-color: rgb(255, 252, 238);
 }
 
 /*Age slider*/
