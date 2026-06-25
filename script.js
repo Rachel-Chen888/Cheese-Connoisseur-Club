@@ -115,25 +115,29 @@ form.addEventListener("submit", function (event) {
         SSNError.textContent = "";
         SSN.classList.remove("input-error");
 
-        valid = false;
     }
 
     if (phone.value.trim() === ""){
         phoneError.textContent = "Please enter your phone number.";
         phone.classList.add("input-error");
+
+        valid = false;
     }
     else{
-        //TODO
+        phoneError.textContent = "";
+        phone.classList.remove("input-error");
     }
 
     if(password.value.trim() ===""){
-        //TODO
+        passwordError.textContent = "Please enter your password.";
+        password.classList.add("input-error");
+
+        valid = false;
     }
     else{
-        //TODO
+        passwordError.textContent = "";
+        password.classList.remove("input-error");
     }
-
-
 
     //Email validation
     if (!email.value.includes("@")) {
@@ -146,6 +150,7 @@ form.addEventListener("submit", function (event) {
     }
 
     //Number formatting validation. Includes: SSN, phone, possibly password
+    //TODO: MIGHT REMOVE PASSWORD FIELD ENTIRELY and replace it!
 
 
     //Is this correct? REVIEW THIS
