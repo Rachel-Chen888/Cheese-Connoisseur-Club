@@ -26,29 +26,38 @@ Check Lab instructions for starter code
 const form = document.querySelector("#registration-form");
 
 form.addEventListener("submit", function (event) {
-    
 
-    //VARIABLES
+    /*VARIABLES*/
+
+    //Normal Input Fields
     const firstname = document.querySelector("#firstname");
     const firstnameError = document.querySelector("#firstname-error");
-    const email = document.querySelector("#email");
-    const error = document.querySelector("#email-error");
-    //TODO: ADD ALL FIELDS TO BE CHECKED FOR EMPTY
 
-    //TRACK IF ERRORS EXIST
+    const lastname = document.querySelector("#lastname");
+    const lastnameError = document.querySelector("#lastname-error")
+
+    const email = document.querySelector("#email");
+    const emailError = document.querySelector("#email-error");
+
+    const SSN = document.querySelector("#SSN");
+    const SSNError = document.querySelector("#SSN-error");
+
+    const phone = document.querySelector("#phone");
+    const phoneError = document.querySelector("#phone-error");
+
+    const password = document.querySelector("#password");
+    const passwordError = document.querySelector("#password-error");
+
+    //Dropdown
+
+    //Radio
+
+    //Checkbox
+
+    //TO TRACK IF ERRORS EXIST
     let valid = true;
 
-    event.preventDefault(); //Need to figure out where to put this
-
-    /*To prevent submission when invalid
-    if(!valid) {
-        event.preventDefault();
-    }
-
-    TODO: find correct placement for it in this block. 
-    Or honestly, deciding on the best way to design this. */
-
-    //Check empty fields validation
+    //Checking for empty fields
     //TODO: THE REST
     if(firstname.value.trim() === ""){
         "First name is required.";
@@ -62,14 +71,34 @@ form.addEventListener("submit", function (event) {
         firstname.classList.remove("input-error");
     }
 
+    if(lastname.value.trim() === ""){
+        "Last name is required.";
+
+        lastname.classList.add("input-error");
+
+        valid = false;
+    }
+    else{
+        lastnameError.textContent = "";
+        lastname.classList.remove("input-error");
+    }
+
+    if (email.value.trim() === ""){
+        //TODO:
+    }
+    else{
+        //TODO:
+    }
+
+
 
     //Email validation
     if (!email.value.includes("@")) {
-        error.textContent = "Please enter a valid email address.";
+        emailError.textContent = "Please enter a valid email address.";
         email.classList.add("input-error");
         valid = false;
     } else {
-        error.textContent = "";
+        emailError.textContent = "";
         email.classList.remove("input-error");
     }
 
@@ -79,4 +108,12 @@ form.addEventListener("submit", function (event) {
     success.style.display = "block";
 
     Check if we need to reset this*/
+
+    //Is this correct? REVIEW THIS
+    if(!valid){
+        event.preventDefault();
+    }
+    else{
+        //TODO: Success Message, and possibly a redirect to index.html
+    }
 });

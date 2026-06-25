@@ -46,6 +46,8 @@
                     <div class="form-input">
                         <label for="lastname">Last Name:<span class ="required">*</span></label>
                         <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="6000">
+                        
+                        <span id="lastname-error" class = "error-message"></span>
                     </div>
 
                     <div class="form-input">
@@ -60,22 +62,29 @@
                         <!---Need to add text to specify SSN format-->
                         <label for="SSN">SSN:<span class ="required">*</span></label>
                         <input type="text" id="SSN" name="SSN" pattern="[0-9]{9}" required>
+
+                        <span id="SSN-error" class="error-message"></span>
                     </div>
 
                     <div class="form-input">
                         <label for="phone">Phone Number:<span class ="required">*</span></label>
                         <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                        <span id="phone-error" class="error-message"></span>
                     </div>
 
                     <div class="form-input">
                         <label for="password">Password:<span class ="required">*</span></label>
                         <input type="password" id="password" name="password" minlength="8" maxlength="6000" required> <!---Need to add validation-->
+
+                        <span id="password-error" class ="error-message"></span>
                     </div>
 
                    <div class="form-input slider-group">
                         <label for="age">Age:<span class ="required">*</span></label>
                         <input type="range" min="1" max="100" value="100" class="slider" id="age" name="age" oninput="document.getElementById('ageValue').textContent = this.value;">
                         <output id="ageValue">100</output>
+                        <!--Error message not needed since...we already gave the only acceptable ranges, and they're forced to select one no matter where the slider is-->
                     </div>
 
                     <div class="form-input">
