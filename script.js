@@ -1,6 +1,7 @@
+console.log("Script.js Loaded!"); //To check that JS is loading
 
 // Starter code from Lab3
-<script src="js/script.js" defer></script>
+//<script src="js/script.js" defer></script> <---Pretty sure this is HTML and not supposed to be in here
 function updateWelcomeMessage() {
     const message = document.querySelector("#welcome-message");
     message.textContent = "Welcome to our interactive CSI 3140 website!";
@@ -22,10 +23,13 @@ Check Lab instructions for starter code
 //Provide: 1. error messages when invalid, 2. Prevent submission when invalid, 3. success messages when successful
 
 //NOTE: This is the default code given
-
+console.log("Before form lookup");
 const form = document.querySelector("#registration-form");
+console.log(form); //to check what is loading
+console.log("After form lookup.");
 
 form.addEventListener("submit", function (event) {
+    console.log("Submit event is RUNNING!");
 
     /*VARIABLES*/
 
@@ -54,13 +58,16 @@ form.addEventListener("submit", function (event) {
 
     //Checkbox
 
+    //Success message
+    const success = document.querySelector("#success-message");
+
     //TO TRACK IF ERRORS EXIST
     let valid = true;
 
     //Checking for empty fields
     //TODO: THE REST
     if(firstname.value.trim() === ""){
-        "First name is required.";
+        firstnameError.textContent = "Please enter your first name.";
 
         firstname.classList.add("input-error");
 
@@ -72,7 +79,7 @@ form.addEventListener("submit", function (event) {
     }
 
     if(lastname.value.trim() === ""){
-        "Last name is required.";
+        lastnameError.textContent = "Please enter your last name."
 
         lastname.classList.add("input-error");
 
@@ -84,10 +91,36 @@ form.addEventListener("submit", function (event) {
     }
 
     if (email.value.trim() === ""){
-        //TODO:
+        emailError.textContent = "Please enter your email address.";
+
+        email.classList.add("input-error");
+
+        valid = false;
     }
     else{
-        //TODO:
+        emailError.textContent = "";
+        email.classList.remove("input-error");
+    }
+
+    if(SSN.value.trim() === ""){
+        //TODO
+    }
+    else{
+        //TODO
+    }
+
+    if (phone.value.trim() === ""){
+        //TODO
+    }
+    else{
+        //TODO
+    }
+
+    if(password.value.trim() ===""){
+        //TODO
+    }
+    else{
+        //TODO
     }
 
 
@@ -111,9 +144,14 @@ form.addEventListener("submit", function (event) {
 
     //Is this correct? REVIEW THIS
     if(!valid){
+        console.log("Invalid Submission"); //for documentation purposes?
+        success.style.display = "none";
         event.preventDefault();
     }
     else{
-        //TODO: Success Message, and possibly a redirect to index.html
+        success.textContent = "Registration successful!";
+        success.style.display = "block";
+        console.log("Form Submitted!");
+        //TODO: Make it redirect to index.html?
     }
 });
