@@ -114,10 +114,13 @@ form.addEventListener("submit", function (event) {
     else{
         SSNError.textContent = "";
         SSN.classList.remove("input-error");
+
+        valid = false;
     }
 
     if (phone.value.trim() === ""){
-        //TODO
+        phoneError.textContent = "Please enter your phone number.";
+        phone.classList.add("input-error");
     }
     else{
         //TODO
