@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Manrope:wght@200..800&display=swap');
 
+
+
 /* GLOBAL STYLES -----------------------------------------------------------------------------*/
 
 *,
@@ -52,7 +54,6 @@ h2 {
 
 /*Attempt to use @media*/
 @media (max-width: 600px) {
-
     h1 {
         font-size: 1.8rem;
     }
@@ -60,7 +61,6 @@ h2 {
     h2{
         font-size: 1.5rem;
     }
-
 }
 
 p {
@@ -113,14 +113,16 @@ nav a {
   }
 }
 
+
 /*body background and font*/
-body{
+body {
   background-color:rgb(255, 252, 238);
   padding: 10px;
   color:#41213a;
-  cursor: url('./Images/cursor.png'), auto;   
+  /* cursor: url('./Images/cursor.png'), auto;    */
   box-sizing: border-box; /*TA said this would be helpful (TODO: Figure out how to use this)*/
 }
+
 
 /*footer*/
 footer {
@@ -133,24 +135,19 @@ footer {
   margin: 40px 20px;
 }
 
-/*TODO: REMOVE ONE OF THESE*/
-/*this one is specifically for schedule page*/
-footer.schedule_footer {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 100%;
-  max-width: 800px;
-  box-sizing: border-box; 
-  background-color: rgba(250, 236, 192, 0.95); 
+
+/* Seperate Content used in many html files */
+.content-block {
+  text-align: center;
   padding: 15px;
+  background-color: #faecc0;
+  border: none;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  margin-top: 30px;
+  margin: 40px 20px;
+
 }
+
 
 .external-link {
   text-decoration: none;
@@ -257,6 +254,18 @@ input {
   width: 100%; /*This is just the recommendations from VSCode, what the heck*/
 }
 
+#announcements {
+  list-style-type: none; 
+  padding-right: 40px; /* padding left has 40px because its a list item  */
+}
+
+#announcements li {
+  margin-bottom: 10px; 
+  border: 2px solid black; 
+  padding: 8px; 
+  background-color: rgb(255, 252, 238);
+}
+
 /*REGISTRATION PAGE ------------------------------------------------------------------*/
 
 .register-page{
@@ -309,16 +318,6 @@ input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-}
-
-.content-header {
-  text-align: center;
-  padding: 15px;
-  background-color: #faecc0;
-  border: none;
-  border-radius: 4px;
-  margin-top: 30px;
-  margin: 40px 20px;
 }
 
 /*Age slider*/
@@ -418,6 +417,26 @@ body.schedule_body{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   box-sizing: border-box; 
 }
+
+/*TODO: REMOVE ONE OF THESE*/
+/*this one is specifically for schedule page*/
+footer.schedule_footer {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box; 
+  background-color: rgba(250, 236, 192, 0.95); 
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
 
 @media (max-width: 600px) {
   body.schedule_body {
