@@ -180,10 +180,10 @@ JavaScript array or object to store and display information dynamically.
 */ 
 
 const announcements = [
-    "Registration ends on June 32",
-    "Cheese voting ends on June 32",
-    "NDA for our top secret cheese recipe due July 32",  
-    "Cheese Wars commencing on July 32"
+    "Registration ends on June 30",
+    "Cheese voting ends on July 2",
+    "NDA for our top secret cheese recipe due July 5",  
+    "Cheese Wars commencing on July 10"
 ];
 announcements.forEach(function (announcement) {
     const item = document.createElement("li"); 
