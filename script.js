@@ -29,6 +29,9 @@ console.log(form); //to check what is loading
 console.log("After form lookup.");
 
 form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
     console.log("Submit event is RUNNING!");
 
     /*VARIABLES*/
@@ -103,10 +106,14 @@ form.addEventListener("submit", function (event) {
     }
 
     if(SSN.value.trim() === ""){
-        //TODO
+        SSNError.textContent = "Please enter you SSN.";
+        SSN.classList.add("input-error");
+
+        valid = false;
     }
     else{
-        //TODO
+        SSNError.textContent = "";
+        SSN.classList.remove("input-error");
     }
 
     if (phone.value.trim() === ""){
@@ -135,23 +142,28 @@ form.addEventListener("submit", function (event) {
         email.classList.remove("input-error");
     }
 
-    /*After checking validity of every field during form submission, reveal the success message!
+    //Number formatting validation. Includes: SSN, phone, possibly password
 
-    success.textContent = "Registration successful!";
-    success.style.display = "block";
-
-    Check if we need to reset this*/
 
     //Is this correct? REVIEW THIS
     if(!valid){
         console.log("Invalid Submission"); //for documentation purposes?
         success.style.display = "none";
-        event.preventDefault();
     }
     else{
+
+        form.reset(); //reset to empty the form after good submission
+        
         success.textContent = "Registration successful!";
-        success.style.display = "block";
+        success.style.display = "block";     
+
+        //wipe the error messages too
+        document.querySelectorAll(".error-message").forEach(error => {
+            error.textContent = "";
+        });
+
         console.log("Form Submitted!");
+
         //TODO: Make it redirect to index.html?
     }
 });
