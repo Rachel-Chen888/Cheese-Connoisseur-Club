@@ -184,7 +184,7 @@ a:hover {
 /* ERROR CSS*/
 .error-message {
   color: red;
-  font-size: 0.9 rem;
+  font-size: 0.9 rem; /*Might need to reconsider size*/
 }
 
 .input-error {
@@ -192,8 +192,14 @@ a:hover {
 }
 
 #success-message{
-  display: hidden; /*Or none. May change*/
+  display: none;
   color: green; /*TODO: Change color*/
+  font-weight: bold;
+}
+
+#failure-message{
+  display: none;
+  color:#41213a;
   font-weight: bold;
 }
 

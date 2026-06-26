@@ -96,6 +96,7 @@
                             <option value="other">Other</option>
                             <option value="cheese">Cheese</option>
                         </select>
+                        <span id = "gender-error" class = "error-message"></span>
                     </div>
 
                     <div class="form-input radio-grid">
@@ -104,7 +105,7 @@
                             Cheese Knowledge Level:
                         </label>
 
-                        <div class="radio-grid">
+                        <div class="radio-grid"> 
                             <label for="beginner">Beginner <input type="radio" id="beginner"
                                 name="cheese_knowledge"
                                 value="beginner" required></label>
@@ -123,6 +124,7 @@
                             <label for="god">GOD <input type="radio" id="god"
                                 name="cheese_knowledge"
                                 value="god"></label>
+                            <span id = "knowledge-error" class = "error-message"></span>
 
                         </div>
 
@@ -131,16 +133,19 @@
                     <div class="form-input textarea">
                         <label for="favorite_cheese">Favorite Cheese:<span class ="required">*</span></label>
                         <textarea id="favorite_cheese" name="favorite_cheese" rows="4" maxlength="6000" required></textarea>
+                        <span id = favorite-error class = "error-message"></span>
                     </div>
 
                     <div class="form-input checkbox-group">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms"><span class ="required">*</span> I pledge allegiance to the Cheese Connoisseur Club, and to the republic for which it stands, one nation under Cheese, indivisible, with liberty and justice for all Cheese lovers, appreciators and connoisseurs.</label>
+                        <span id = "terms-error" class = "error-message"></span>
                     </div>
 
                     <div class="submit">
                         <button type="submit">Register</button>
                         <p id="success-message"></p> <!--For JS form submission validation-->
+                        <p id="failure-message"></p>
                     </div>
                 </fieldset>
             </form>
