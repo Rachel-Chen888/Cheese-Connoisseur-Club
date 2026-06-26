@@ -60,17 +60,24 @@ const failureMessages = [
     "Maybe you should get an adult or friend to help you.",
     "How hard is it to read???",
     "It's a wonder you managed to even navigate here.",
-    "Aren't you a University Student? How is it this hard to fill a form correctly?",
     "...You do know how to read right?",
     "I refuse to believe you have a functional frontal lobe.",
     "Don't just spam the button!",
     "You are not qualified to be a member of this club",
+    "Our interns are crying.",
+    "This is starting to feel personal.",
+    "Please stop bullying the submit button.",
     "I'm regretting my life decisions.",
-    "I'm not paid enough for this",
+    "I'm not paid enough for this.",
     "This is just...sad.",
     "You're doing this for fun now, huh?",
     "You think this is funny? I have a wife and children!",
-    "The Cheese is disappointed in you."
+    "The Cheese is disappointed in you.",
+    "We've been trying to reach you regarding your Life's extended Warranty.",
+    "The biggest and heaviest cheese ever created was 32 feet long and weighed 57,518 pounds.",
+    "There are more than 2000 varieties of cheese available worldwide.",
+    "A whopping 20 million metric tons of cheese is produced worldwide each year and production is increasing with growing demand.",
+    "Approximately 10 pounds of milk is required to make one pound of cheese"
 ];
 
 
@@ -289,10 +296,11 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
          success.style.display = "none";
          failure.style.display = "block";
 
-         if(failedAttempts % 5 === 0){
-            const i = Math.floor(failedAttempts / 5 - 1) % failureMessages.length;
+         if(failedAttempts >= 5){
+            const i = Math.floor(Math.random() * failureMessages.length);
 
             failure.textContent = failureMessages[i];
+            failedAttempts = 0;
          }
          else{
             failure.textContent = "Registration Failed. Please fix the highlighted fields.";
