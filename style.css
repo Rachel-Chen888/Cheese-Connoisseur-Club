@@ -537,3 +537,68 @@ footer.schedule_footer {
 .about-section a:focus {
 outline: 2px solid #4a2e2e; 
 }
+
+/*THEME TOGGLE BUTTON -----------------------------------------------------------------------------*/
+
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 15px;
+  background-color: #4a2e2e;
+  color: #faeac0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #fae8c0;
+    color: #4a2e2e;
+}
+
+/*DARK MODE -----------------------------------------------------------------------------*/
+
+body.dark-mode header,
+body.dark-mode .card,
+body.dark-mode .register-form,
+body.dark-mode .content-header,
+body.dark-mode .about-section,
+body.dark-mode nav a,
+body.dark-mode .schedule_table caption {
+  background-color: #b84d00; 
+  color: #ffffff; 
+  border-color: #8a3a00;
+}
+
+body.schedule_body.dark-mode {
+  background-image: url('../Images/cheese_dark_bg.jpg'); 
+    
+  background-color: #121212; 
+  color: #f5f5f5;
+
+}
+
+body.dark-mode header a,
+body.dark-mode .schedule_table th,
+body.dark-mode footer{
+    background-color: #ae764e; 
+}
+
+body.footer.dark-mode {
+  background-color: #ae764e; 
+  color: #ffffff; 
+  border-color: #8a3a00;
+}
+
+body.dark-mode nav a:hover {
+  background-color: #8a3a00;
+  color: #ffffff;
+}
+
+body.schedule_body.dark-mode .page_wrapper {
+  background-color: rgba(65, 63, 44, 0.7); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}

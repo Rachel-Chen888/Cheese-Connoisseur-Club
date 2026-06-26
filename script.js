@@ -208,3 +208,32 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
  });
 }
+
+
+//Part G - Dark Mode Toggle --------------------------------------------------------------------
+
+console.log("Before theme toggle lookup");
+const themeBtn = document.querySelector("#theme-toggle");
+console.log(themeBtn); //to check what is loading
+console.log("After theme toggle lookup");
+
+if (themeBtn) { //make sure this only runs when button exists
+    themeBtn.addEventListener("click", function (event) {
+        
+        console.log("Theme toggle event is running");
+
+        const body = document.querySelector("body"); 
+
+        //Toggle dark mode class
+        body.classList.toggle("dark-mode");
+
+        //Update button text based on state
+        if (body.classList.contains("dark-mode")) {
+            themeBtn.textContent = "Cheese At Daylight!";
+            console.log("Switched to dark mode.");
+        } else {
+            themeBtn.textContent = "Cheese At Night!";
+            console.log("Switched to light mode.");
+        }
+    });
+}
