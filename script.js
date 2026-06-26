@@ -112,9 +112,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
      const phone = document.querySelector("#phone");
      const phoneError = document.querySelector("#phone-error");
 
-     const password = document.querySelector("#password");
-     const passwordError = document.querySelector("#password-error");
-
      //Success message
      const success = document.querySelector("#success-message");
      const failure = document.querySelector("#failure-message");
@@ -214,18 +211,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     else{
         phoneError.textContent = "";
         phone.classList.remove("input-error");
-    }
-
-    //TODO: MAY REMOVE PASSWORD FROM FORM ENTIRELY
-    if(password.value.trim() ===""){
-        passwordError.textContent = "Please enter your password.";
-        password.classList.add("input-error");
-
-        valid = false;
-    }
-    else{
-        passwordError.textContent = "";
-        password.classList.remove("input-error");
     }
 
     //Textarea
