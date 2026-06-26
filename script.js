@@ -86,20 +86,14 @@ const failureMessages = [
 ];
 
 
-//NOTE: This is the default code given
 console.log("Before form lookup");
 const form = document.querySelector("#registration-form");
 console.log(form); //to check what is loading
 console.log("After form lookup.");
 
+//ALL FUNCTIONS RELATED TO REGISTRATION FORM
 if(form){ //makes sure this only runs when form exists (ie. on registration.html), to avoid issues.
-     form.addEventListener("submit", function (event) {
-
-     event.preventDefault();
-
-     console.log("Submit event is RUNNING!");
-
-   //VARIABLES--------------------------------------
+     //VARIABLES--------------------------------------
 
    //Normal Input Fields
      const firstname = document.querySelector("#firstname");
@@ -117,33 +111,97 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
      const phone = document.querySelector("#phone");
      const phoneError = document.querySelector("#phone-error");
 
+    //Text Area
+    const favoriteCheese = document.querySelector("#favorite_cheese");
+    const favoriteError = document.querySelector("#favorite-error");
+
+    //Radio Buttons
+    const knowledge = document.querySelector('input[name="cheese_knowledge"]:checked');
+    const knowledgeError = document.querySelector("#knowledge-error");
+
+    //Dropdown
+    const gender = document.querySelector("#gender");
+    const genderError = document.querySelector("#gender-error");
+
+    //Checkbox
+    const terms = document.querySelector("#terms");
+    const termsError = document.querySelector("#terms-error");
+
      //Success message
      const success = document.querySelector("#success-message");
      const failure = document.querySelector("#failure-message");
+    
+     //This is more related to the DOM Events section of the lab!
+
+    const fav_counter = document.querySelector("#character-counter");
+ favoriteCheese.addEventListener("input", function(){
+    const remaining = 6000 - favoriteCheese.value.length;
+
+    fav_counter.textContent = remaining + " characters remaining.";
+ });
+
+    //VALIDATION METHOD
+     form.addEventListener("submit", function (event) {
+
+     event.preventDefault();
+
+     console.log("Submit event is RUNNING!");
 
      //TO TRACK IF ERRORS EXIST
      let valid = true;
 
      //Checking for empty fields
      //TODO: ADD MIN-LENGTH AND MAX-LENGTH CHECKERS
-     if(firstname.value.trim() === ""){
+
+     const firstnameValue = firstname.value.trim();
+     if(firstnameValue === ""){
          firstnameError.textContent = "Please enter your first name.";
 
          firstname.classList.add("input-error");
 
          valid = false;
      }
+     else if(firstnameValue.length < 2){
+
+        firstnameError.textContent = "First name must be at least 2 characters long.";
+        firstname.classList.add("input-error");
+
+        valid = false;
+     }
+
+     else if (firstnameValue.length > 2000){
+        firstnameError.textContent = "First name cannot exceed 2000 characters.";
+        firstname.classList.add("input-error");
+
+        valid = false;
+     }
      else{
          firstnameError.textContent = "";
          firstname.classList.remove("input-error");
      }
 
-     if(lastname.value.trim() === ""){
+    
+     const lastnameValue = lastname.value.trim();
+
+     if(lastnameValue === ""){
          lastnameError.textContent = "Please enter your last name."
 
          lastname.classList.add("input-error");
 
          valid = false;
+     }
+     else if(lastnameValue.length < 2){
+        lastnameError.textContent = "Last name must be at least 2 characters long.";
+        lastname.classList.add("input-error");
+
+        valid = false;
+     }
+
+     else if (lastnameValue.length > 2000){
+        lastnameError.textContent = "Last name cannot exceed 2000 characters.";
+        lastname.classList.add("input-error");
+
+        valid = false;
      }
      else{
          lastnameError.textContent = "";
@@ -151,18 +209,26 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
      }
 
      //Email
-
-     if (email.value.trim() === ""){
+     const emailValue = email.value.trim();
+     if (emailValue === ""){
          emailError.textContent = "Please enter your email address.";
 
          email.classList.add("input-error");
 
          valid = false;
      }
-     else if (!email.value.includes("@")){ //Email Validation check
+     else if (!emailValue.includes("@")){ //Email Validation check
         emailError.textContent = "Please enter a valid email address.";
          email.classList.add("input-error");
+
          valid = false;
+     }
+
+     else if (emailValue.length > 2000){
+        emailError.textContent = "Email address must not exceed 2000 characters.";
+        email.classList.add("input-error");
+
+        valid = false;
      }
      else{
          emailError.textContent = "";
@@ -220,10 +286,15 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 
     //TODO: ADD CHARACTER COUNTER
     //Textarea
-    const favoriteCheese = document.querySelector("#favorite_cheese");
-    const favoriteError = document.querySelector("#favorite-error");
-    if(favoriteCheese.value.trim() === ""){
+    const favoriteCheeseValue = favoriteCheese.value.trim()
+    if(favoriteCheeseValue === ""){
         favoriteError.textContent = "State your favorite Cheese(s).";
+        favoriteCheese.classList.add("input-error");
+
+        valid = false;
+    }
+    else if(favoriteCheeseValue.length > 6000){
+        favoriteError.textContent = "Statement cannot exceed 6000 characters";
         favoriteCheese.classList.add("input-error");
 
         valid = false;
@@ -234,8 +305,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
 
     //Radio buttons
-    const knowledge = document.querySelector('input[name="cheese_knowledge"]:checked');
-    const knowledgeError = document.querySelector("#knowledge-error");
 
     if (!knowledge){
         knowledgeError.textContent = "Please select your level of cheese expertise.";
@@ -247,8 +316,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
 
     //Dropdown
-    const gender = document.querySelector("#gender");
-    const genderError = document.querySelector("#gender-error");
     if(gender.value === ""){
         genderError.textContent = "Choose your gender.";
         gender.classList.add("input-error");
@@ -261,8 +328,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
 
     //Checkbox
-    const terms = document.querySelector("#terms");
-    const termsError = document.querySelector("#terms-error");
 
     if (!terms.checked){
         termsError.textContent = "Pledge yourself to the Cheese Connoisseur Club.";
@@ -318,6 +383,8 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
          //TODO: Make it redirect to index.html?
     }
  });
+
+
 }
 
 
