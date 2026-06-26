@@ -57,7 +57,7 @@ let failedAttempts = 0;
 
 const failureMessages = [
     "Wow, you're pretty bad at this.",
-    "Maybe you should get an adult or friend to help you.",
+    "Try finding an adult to help you.",
     "How hard is it to read???",
     "It's a wonder you managed to even navigate here.",
     "...You do know how to read right?",
