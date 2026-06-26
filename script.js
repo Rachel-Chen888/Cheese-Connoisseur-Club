@@ -59,7 +59,7 @@ const failureMessages = [
     "Wow, you're pretty bad at this.",
     "Try finding an adult to help you.",
     "How hard is it to read???",
-    "It's a wonder you managed to even navigate here.",
+    "It's a wonder you even managed to get here.",
     "...You do know how to read right?",
     "I refuse to believe you have a functional frontal lobe.",
     "Don't just spam the button!",
@@ -73,11 +73,16 @@ const failureMessages = [
     "You're doing this for fun now, huh?",
     "You think this is funny? I have a wife and children!",
     "The Cheese is disappointed in you.",
-    "We've been trying to reach you regarding your Life's extended Warranty.",
+    "We've been trying to reach you regarding your car's extended Warranty.",
     "The biggest and heaviest cheese ever created was 32 feet long and weighed 57,518 pounds.",
     "There are more than 2000 varieties of cheese available worldwide.",
     "A whopping 20 million metric tons of cheese is produced worldwide each year and production is increasing with growing demand.",
-    "Approximately 10 pounds of milk is required to make one pound of cheese"
+    "Approximately 10 pounds of milk is required to make one pound of cheese",
+    "You're still here?",
+    "Why do you make me suffer?", 
+    "Cheese curds squeak because the elastic protein strands in the cheese rub against the enamel of your teeth.",
+    "It takes ten pounds of milk to make just one pound of cheese.", 
+    "The Sun will explode in 5 billion years."
 ];
 
 
@@ -120,7 +125,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
      let valid = true;
 
      //Checking for empty fields
-     //TODO: THE REST
+     //TODO: ADD MIN-LENGTH AND MAX-LENGTH CHECKERS
      if(firstname.value.trim() === ""){
          firstnameError.textContent = "Please enter your first name.";
 
@@ -213,6 +218,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
         phone.classList.remove("input-error");
     }
 
+    //TODO: ADD CHARACTER COUNTER
     //Textarea
     const favoriteCheese = document.querySelector("#favorite_cheese");
     const favoriteError = document.querySelector("#favorite-error");
@@ -254,7 +260,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
         gender.classList.remove("input-error");
     }
 
-    //Checkbox //TODO: FIX!!!!!
+    //Checkbox
     const terms = document.querySelector("#terms");
     const termsError = document.querySelector("#terms-error");
 
@@ -297,7 +303,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
          form.reset(); //reset to empty the form after good submission
         
          failure.style.display = "none";  
-         success.textContent = "Registration successful!";
+         success.textContent = "Congratulations! Registration successful!";
          success.style.display = "block";
 
          failedAttempts = 0;
