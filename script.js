@@ -239,8 +239,8 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 
      //SSN
      const ssnPattern = /^\d{9}$/; //Trying to define the parameters for the SSN (9 digits long, 0-9)
-
-     if(SSN.value.trim() === ""){
+     const ssnValue = SSN.value.trim();
+     if(ssnValue === ""){
          SSNError.textContent = "Please enter you SSN.";
          SSN.classList.add("input-error");
 
@@ -248,6 +248,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
     else if(ssnValue.length !== 9){
         SSNError.textContent = "SSN must contain exactly 9 digits.";
+        SSN.classList.add("input-error");
 
         valid = false;
     }
