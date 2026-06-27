@@ -115,10 +115,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     const favoriteCheese = document.querySelector("#favorite_cheese");
     const favoriteError = document.querySelector("#favorite-error");
 
-    //Radio Buttons
-    const knowledge = document.querySelector('input[name="cheese_knowledge"]:checked');
-    const knowledgeError = document.querySelector("#knowledge-error");
-
     //Dropdown
     const gender = document.querySelector("#gender");
     const genderError = document.querySelector("#gender-error");
@@ -305,6 +301,8 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
     }
 
     //Radio buttons
+    const knowledge = document.querySelector('input[name="cheese_knowledge"]:checked');
+    const knowledgeError = document.querySelector("#knowledge-error");
 
     if (!knowledge){
         knowledgeError.textContent = "Please select your level of cheese expertise.";
