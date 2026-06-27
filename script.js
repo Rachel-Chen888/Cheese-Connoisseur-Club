@@ -246,12 +246,17 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
         console.log("SSN value:", SSN.value);
         console.log("Regex result:", ssnPattern.test(SSN.value));
 
-        SSNError.textContent = "SSN must contain exactly 9 digits.";
+        SSNError.textContent = "SSN may only contain numbers.";
 
         SSN.classList.add("input-error");
         
         valid = false;
 
+    }
+    else if(ssnValue.length !== 9){
+        SSNError.textContent = "SSN must contain exactly 9 digits.";
+
+        valid = false;
     }
     else{
         SSNError.textContent = "";
