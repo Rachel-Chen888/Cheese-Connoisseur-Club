@@ -493,6 +493,14 @@ footer.schedule_footer {
   background-color: #faecc0;
 }
 
+.schedule_table tbody tr:focus{
+  outline :3px solid #4a2e2e;
+}
+
+#event-description{
+  font-size: 0.9rem;
+
+}
 /*ABOUT PAGE -----------------------------------------------------------------------------*/
 .about{ 
   color:#41213a;
@@ -601,4 +609,8 @@ body.dark-mode nav a:hover {
 body.schedule_body.dark-mode .page_wrapper {
   background-color: rgba(65, 63, 44, 0.7); 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.dark-mode .schedule_table tbody tr:focus {
+  outline: 3px solid #faecc0;
 }

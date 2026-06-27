@@ -391,6 +391,59 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 
 //SCHEDULE PAGE --------------------------------------------------------------------
 
+/*This method is an attempt at creating another event handling situation, an event description appears 
+when the user clicks on one of the schedule table cells*/
+
+console.log("Before scheduleTable lookup");
+const scheduleTable = document.querySelector(".schedule_table");
+console.log(scheduleTable);//To check that it is not pulling null
+console.log("After scheduleTable lookup");
+
+if(scheduleTable){
+    const rows = scheduleTable.querySelectorAll("tbody tr"); //get all of the rows
+    const eventDescriptions = {
+        "Cheese Tasting":
+        "Sample rare cheeses from around the world.",
+
+        "Cheese Making Class":
+        "Learn to make your own fresh cheese.",
+
+        "Workshop: Cheese Pairing":
+        "Discover which foods complement different cheeses.",
+
+        "Cheese Debate Night":
+        "Argue passionately and lawfully about controversial cheese opinions.",
+
+        "Cheese and Wine Night":
+        "Pair regional cheeses with carefully selected wines. A participation fee is required."
+    };
+
+    rows.forEach(row => {
+        
+        row.tabIndex = 0; //Makes is to that the user can use keyboard
+
+        row.addEventListener("click", function(){
+
+            const eventName = row.cells[2].textContent;
+
+            document.querySelector("#event-title").textContent = eventName;
+
+            document.querySelector("#event-description").textContent = eventDescriptions[eventName];
+
+            document.querySelector("#event-info").hidden = false;
+        });
+
+        row.addEventListener("keydown", function(event){
+            if(event.key ==="Enter" || event.key === " "){ //user can use enter key or space key to select
+                event.preventDefault();
+                row.click();
+            }
+        });
+
+    });
+}
+
+
 /*This is the code for the website's dark mode functionality
 So far, it has only been implemented and tested in the schedule page. 
 We will move the code once it's been implemented globally.*/
