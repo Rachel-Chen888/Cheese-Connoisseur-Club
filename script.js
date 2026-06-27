@@ -145,6 +145,11 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 
      //TO TRACK IF ERRORS EXIST
      let valid = true;
+    
+     //wipe the error messages too
+        document.querySelectorAll(".error-message").forEach(error => {
+            error.textContent = "";
+        });
 
      //Checking for empty fields
      //TODO: ADD MIN-LENGTH AND MAX-LENGTH CHECKERS
@@ -241,6 +246,11 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 
         valid = false;
     }
+    else if(ssnValue.length !== 9){
+        SSNError.textContent = "SSN must contain exactly 9 digits.";
+
+        valid = false;
+    }
     else if(!ssnPattern.test(SSN.value)){ //SSN format check
         //Check if it's running.
         console.log("SSN value:", SSN.value);
@@ -253,11 +263,7 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
         valid = false;
 
     }
-    else if(ssnValue.length !== 9){
-        SSNError.textContent = "SSN must contain exactly 9 digits.";
-
-        valid = false;
-    }
+    
     else{
         SSNError.textContent = "";
         SSN.classList.remove("input-error");
