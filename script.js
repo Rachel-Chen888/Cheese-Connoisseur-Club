@@ -7,23 +7,15 @@ function updateWelcomeMessage() {
     message.textContent = "Welcome to our interactive CSI 3140 website!";
 }
 
-//Part C - Event Handling. TODO: Need at least 3 different instances of event handlers.-----------------------
-
-
-
-//Part D - Dynamic Page Behaviour --------------------------------------------------------------------
-/* TODO: Need 3 meaningful behaviours, from list (refer to the lab instructions)
-At least one feature must involve creating or updating content from a JavaScript array or object
-
-Check Lab instructions for starter code
-*/
-
-// Part F - JavaScript Data Structures
-
-/* 
+//Index Page --------------------------------------------------------------------------------------------------------------------
+/*
 Students must use at least one 
 JavaScript array or object to store and display information dynamically.
 */ 
+
+/* This method displays a list of upcoming events in announcements. These events will pop when 
+the user clicks on them, to minimize and make more space (dynamic). 
+They reappear when the page is reloaded*/
 
 const announcements = [
     "Registration ends on June 30",
@@ -48,9 +40,7 @@ if (announcementsList) {
     });
 }
 
-//Part E - (Registration) Form Validation --------------------------------------------------------
-//TODO: Validate 1. no empty fields, 2. valid email, 3. our choice
-
+//REGISTRATION PAGE --------------------------------------------------------
 //Provide: 1. error messages when invalid, 2. Prevent submission when invalid, 3. success messages when successful
 
 let failedAttempts = 0;
@@ -91,7 +81,8 @@ const form = document.querySelector("#registration-form");
 console.log(form); //to check what is loading
 console.log("After form lookup.");
 
-//ALL FUNCTIONS RELATED TO REGISTRATION FORM
+/*The function focuses on validating the registration form fields in the event of a form submission,
+based on validation rules defined below. The form can either fail to submit or submit successfully*/
 if(form){ //makes sure this only runs when form exists (ie. on registration.html), to avoid issues.
      //VARIABLES--------------------------------------
 
@@ -398,7 +389,11 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
 }
 
 
-//Part G - Dark Mode Toggle --------------------------------------------------------------------
+//SCHEDULE PAGE --------------------------------------------------------------------
+
+/*This is the code for the website's dark mode functionality
+So far, it has only been implemented and tested in the schedule page. 
+We will move the code once it's been implemented globally.*/
 
 console.log("Before theme toggle lookup");
 const themeBtn = document.querySelector("#theme-toggle");
