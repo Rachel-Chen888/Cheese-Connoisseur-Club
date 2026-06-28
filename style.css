@@ -547,6 +547,31 @@ footer.schedule_footer {
 outline: 2px solid #4a2e2e; 
 }
 
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {  
+  padding: 17px;
+  width: 100%;
+  text-align: left; 
+  transition: 0.4s;
+  background-color: rgb(255, 252, 238);
+  color:#4a2e2e;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.active, .accordion:hover {
+  background-color: #4a2e2e;
+  color: white;
+}
+
+.panel {
+  padding: 0 15px;
+  background-color: #faecc0;
+  display: none;
+  overflow: hidden;
+}
+
+
 /*THEME TOGGLE BUTTON -----------------------------------------------------------------------------*/
 
 .theme-btn {

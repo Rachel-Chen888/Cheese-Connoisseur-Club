@@ -40,6 +40,36 @@ if (announcementsList) {
     });
 }
 
+
+
+//ABOUT PAGE ----------------------------------------------------------------------------------
+//FAQ section with accordian 
+/* 
+Each team must implement at least three meaningful dynamic features
+The accordian FAQ allows for meaningful dynamic page behaviour, where JavaScript changes the page after it is loaded. 
+*/ 
+
+// gets all the buttons for the accordian
+const accordian = document.getElementsByClassName("accordion"); 
+
+//go thru every button 
+for(let i = 0; i < accordian.length; i++) {
+    accordian[i].addEventListener("click", function() { 
+        // The clicked button
+        this.classList.toggle("active");
+ 
+        // toggle between show and not showing 
+        const panel = this.nextElementSibling;
+        if(panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+
+
 //REGISTRATION PAGE --------------------------------------------------------
 //Provide: 1. error messages when invalid, 2. Prevent submission when invalid, 3. success messages when successful
 
