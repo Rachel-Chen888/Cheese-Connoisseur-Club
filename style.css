@@ -559,14 +559,27 @@ outline: 2px solid #4a2e2e;
   background-color: #4a2e2e;
   color: #faeac0;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   font-weight: bold;
 }
 
+@media (max-width: 600px) {
+  .theme-btn {
+    top: 10px;
+    right: 10px; 
+    padding: 6px 10px; 
+    font-size: 12px; 
+  }
+
+  .site-header {
+    padding-top: 50px; 
+  }
+}
+
 body.dark-mode .theme-btn {
-    background-color: #fae8c0;
-    color: #4a2e2e;
+  background-color: #fae8c0;
+  color: #4a2e2e;
 }
 
 /*DARK MODE -----------------------------------------------------------------------------*/
