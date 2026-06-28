@@ -170,6 +170,14 @@ outline: 3px solid #4a2e2e;
 outline-offset: 2px;
 }
 
+.dark-mode button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+outline: 3px solid #faecb0;
+outline-offset: 2px;
+}
+
 /*For Nav Bar*/
 a:focus {
 outline: 3px solid #faecb0;
@@ -496,6 +504,10 @@ footer.schedule_footer {
 
 .schedule_table tbody tr:focus{
   outline :3px solid #4a2e2e;
+}
+
+.dark-mode .schedule_table tbody tr:focus{
+  outline: 3px solid #faecb0;
 }
 
 #event-description{

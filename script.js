@@ -32,7 +32,7 @@ const announcementsList = document.querySelector("#announcements");
 if (announcementsList) {
     announcements.forEach(function (announcement) { 
         console.log("Announcments Running!");
-
+        
         // Create list item for announcements 
         const item = document.createElement("li"); 
         item.textContent = announcement.message;
@@ -321,7 +321,6 @@ if(form){ //makes sure this only runs when form exists (ie. on registration.html
         phone.classList.remove("input-error");
     }
 
-    //TODO: ADD CHARACTER COUNTER
     //Textarea
     const favoriteCheeseValue = favoriteCheese.value.trim()
     if(favoriteCheeseValue === ""){
