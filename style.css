@@ -211,10 +211,18 @@ a:hover {
   font-weight: bold;
 }
 
+.dark-mode #success-message{
+  color: greenyellow;
+}
+
 #failure-message{
   display: none;
   color:#41213a;
   font-weight: bold;
+}
+
+.dark-mode #success-message{
+  color: #faeac0;
 }
 
 /*INDEX PAGE -----------------------------------------------------------------------------*/
