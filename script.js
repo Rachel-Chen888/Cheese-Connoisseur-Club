@@ -450,15 +450,25 @@ We will move the code once it's been implemented globally.*/
 
 console.log("Before theme toggle lookup");
 const themeBtn = document.querySelector("#theme-toggle");
+const body = document.querySelector("body");
 console.log(themeBtn); //to check what is loading
 console.log("After theme toggle lookup");
 
+// 1. CHECK LOCAL STORAGE ON PAGE LOAD
+// This runs immediately when any page loads, applying the theme before the user even clicks
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    if (themeBtn) {
+        themeBtn.textContent = "Cheese At Daylight!";
+    }
+    console.log("Dark mode loaded from storage.");
+}
+
+// 2. HANDLE BUTTON CLICKS
 if (themeBtn) { //make sure this only runs when button exists
     themeBtn.addEventListener("click", function (event) {
         
         console.log("Theme toggle event is running");
-
-        const body = document.querySelector("body"); 
 
         //Toggle dark mode class
         body.classList.toggle("dark-mode");
@@ -466,10 +476,12 @@ if (themeBtn) { //make sure this only runs when button exists
         //Update button text based on state
         if (body.classList.contains("dark-mode")) {
             themeBtn.textContent = "Cheese At Daylight!";
-            console.log("Switched to dark mode.");
+            localStorage.setItem("theme", "dark"); // Save to browser memory
+            console.log("Switched to dark mode. Choice saved.");
         } else {
             themeBtn.textContent = "Cheese At Night!";
-            console.log("Switched to light mode.");
+            localStorage.setItem("theme", "light"); // Save to browser memory
+            console.log("Switched to light mode. Choice saved.");
         }
     });
 }
