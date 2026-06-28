@@ -19,10 +19,10 @@ They reappear when the page is reloaded*/
 
 //array of announcements for the CCC
 const announcements = [
-    "Registration ends on June 30",
-    "Cheese voting ends on July 2",
-    "NDA for our top secret cheese recipe due July 5",  
-    "Cheese Wars commencing on July 10"
+    { message: "Registration ends on June 30" },
+    { message: "Cheese voting ends on July 2" },
+    { message: "NDA for our top secret cheese recipe due July 5" },
+    { message: "Cheese Wars commencing on July 10" }
 ];
 
 //select the <ul> elem with announcements id 
@@ -35,7 +35,7 @@ if (announcementsList) {
 
         // Create list item for announcements 
         const item = document.createElement("li"); 
-        item.textContent = announcement;
+        item.textContent = announcement.message;
 
         // removing announcements when clicked 
         item.addEventListener("click", () => {
