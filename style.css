@@ -374,6 +374,10 @@ input {
   padding: 20px;
 }
 
+.dark-mode .checkbox-group{
+  accent-color: #faecce;
+}
+
 .checkbox-group input {
   flex: 0 0 auto;
 }
