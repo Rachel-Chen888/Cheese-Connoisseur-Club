@@ -555,8 +555,8 @@ outline: 2px solid #4a2e2e;
   transition: 0.4s;
   background-color: rgb(255, 252, 238);
   color:#4a2e2e;
-  margin-bottom: 10px;
   font-size: 1rem;
+  margin-top: 10px;
 }
 
 .active, .accordion:hover {
@@ -569,6 +569,7 @@ outline: 2px solid #4a2e2e;
   background-color: #faecc0;
   display: none;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 
@@ -668,6 +669,19 @@ body.schedule_body.dark-mode .page_wrapper {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
 }
 
+/* ABOUT ME PAGE IN DARK MODE ---------------------------------------------------------------------------- */
+body.dark-mode .panel { 
+  background-color: #c57d49; 
+}
+
+body.dark-mode .accordion { 
+  background-color: #8a3a00;
+  color:white; 
+}
+
+body.dark-mode .active, .accordion:hover {
+  background-color: #222222; 
+}
 /* REGISTERATION PAGE IN DARK MODE -----------------------------------------------------------------------*/
 
 body.dark-mode input,

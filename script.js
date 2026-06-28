@@ -17,6 +17,7 @@ JavaScript array or object to store and display information dynamically.
 the user clicks on them, to minimize and make more space (dynamic). 
 They reappear when the page is reloaded*/
 
+//array of announcements for the CCC
 const announcements = [
     "Registration ends on June 30",
     "Cheese voting ends on July 2",
@@ -24,17 +25,24 @@ const announcements = [
     "Cheese Wars commencing on July 10"
 ];
 
+//select the <ul> elem with announcements id 
 const announcementsList = document.querySelector("#announcements");
 
+//making sure <ul> exists in the first place 
 if (announcementsList) {
-    announcements.forEach(function (announcement) {
+    announcements.forEach(function (announcement) { 
         console.log("Announcments Running!");
+
+        // Create list item for announcements 
         const item = document.createElement("li"); 
         item.textContent = announcement;
+
+        // removing announcements when clicked 
         item.addEventListener("click", () => {
             item.remove(item); 
         }); 
         
+        // add <li> to <ul> 
         announcementsList.appendChild(item);
     
     });
