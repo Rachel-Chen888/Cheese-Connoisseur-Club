@@ -709,6 +709,13 @@ body.dark-mode .active, body.dark-mode #announcements li:hover {
   background-color: #222222; 
 }
 
+body.dark-mode #announcements li:focus,
+body.dark-mode #announcements li:focus-visible {
+  outline: 5px solid #fae8c0;
+  outline-offset: 4px; 
+}
+
+
 /* ABOUT ME PAGE IN DARK MODE ---------------------------------------------------------------------------- */
 body.dark-mode .panel { 
   background-color: #c57d49; 

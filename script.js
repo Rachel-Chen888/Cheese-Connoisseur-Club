@@ -45,7 +45,9 @@ if (announcementsList) {
 
         // removing announcements with accessiblity 
         item.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
+            if (event.key === "Enter" || event.key == " ") {
+                //pressing space wont make page scroll down 
+                event.preventDefault();  
                 item.remove(item);
             }
         });
