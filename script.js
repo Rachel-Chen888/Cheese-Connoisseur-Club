@@ -36,11 +36,19 @@ if (announcementsList) {
         // Create list item for announcements 
         const item = document.createElement("li"); 
         item.textContent = announcement.message;
+        item.tabIndex = 0; 
 
         // removing announcements when clicked 
         item.addEventListener("click", () => {
             item.remove(item); 
         }); 
+
+        // removing announcements with accessiblity 
+        item.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                item.remove(item);
+            }
+        });
         
         // add <li> to <ul> 
         announcementsList.appendChild(item);

@@ -284,6 +284,10 @@ input {
   background-color: rgb(255, 252, 238);
 }
 
+.active, #announcements li:hover {
+  background-color: #4a2e2e;
+  color: white;
+}
 /*REGISTRATION PAGE ------------------------------------------------------------------*/
 
 .register-page{
@@ -691,6 +695,11 @@ body.dark-mode nav a:hover {
 body.schedule_body.dark-mode .page_wrapper {
   background-color: rgba(65, 63, 44, 0.7); 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* INDEX PAGE IN DARK MODE ------------------------------------------------------------------------------*/ 
+body.dark-mode .active, body.dark-mode #announcements li:hover {
+  background-color: #222222; 
 }
 
 /* ABOUT ME PAGE IN DARK MODE ---------------------------------------------------------------------------- */
