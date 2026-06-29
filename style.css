@@ -288,6 +288,13 @@ input {
   background-color: #4a2e2e;
   color: white;
 }
+
+#announcements li:focus,
+#announcements li:focus-visible {
+  outline: 5px solid #4a2e2e;
+  outline-offset: 4px; 
+}
+
 /*REGISTRATION PAGE ------------------------------------------------------------------*/
 
 .register-page{
